@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import Typed from "typed.js";
 
-import { LucideGithub } from "../../assets/SVGs";
+import { LucideGithub, MdiGmail, MdiLinkedin } from "../../assets/SVGs";
 
 const HomePage = () => {
   const text = useRef(null);
@@ -32,7 +32,7 @@ const HomePage = () => {
           />
         </h1>
       </div>
-      <div className="my-24">
+      <div className="mt-24">
         <p className="font-mono leading-relaxed text-lg text-white">
           Frontend-focused web developer who loves crafting small to
           medium-sized{" "}
@@ -50,6 +50,11 @@ const HomePage = () => {
             reach out!
           </span>
         </p>
+      </div>
+      <div className="mt-20 flex flex-rox">
+        <LucideGithub className="w-12 h-12" />
+        <MdiGmail className="w-12 h-12 mx-7" />
+        <MdiLinkedin className="w-12 h-12" />
       </div>
     </section>
   );
