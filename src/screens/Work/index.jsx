@@ -1,8 +1,8 @@
 const WorkPage = () => {
   return (
-    <>
-      <h1>Work page</h1>
-    </>
+    <section className="px-52">
+      <h1 className="text-white font-mono">My work</h1>
+    </section>
   );
 };
 

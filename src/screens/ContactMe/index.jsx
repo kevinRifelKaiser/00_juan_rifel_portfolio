@@ -1,8 +1,8 @@
 const ContactMe = () => {
   return (
-    <>
-      <h1>Contact Page</h1>
-    </>
+    <section className="px-52">
+      <h1 className="text-white font-mono">Contact me</h1>
+    </section>
   );
 };
 

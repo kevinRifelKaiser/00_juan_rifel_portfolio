@@ -1,8 +1,8 @@
 const AboutMe = () => {
   return (
-    <>
-      <h1>About me page</h1>
-    </>
+    <section className="px-52">
+      <h1 className="text-white font-mono">About me</h1>
+    </section>
   );
 };
 
