@@ -1,16 +1,19 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Typed from "typed.js";
 
 import { LucideGithub, MdiGmail, MdiLinkedin } from "../../assets/SVGs";
 
 const HomePage = () => {
   const text = useRef(null);
+  const [githubIsHover, setGithubIsHover] = useState(false);
+  const [gmailIsHover, setGmailIsHover] = useState(false);
+  const [linkedinIsHover, setLinkedinIsHover] = useState(false);
 
   useEffect(() => {
     const typed = new Typed(text.current, {
       strings: ["web devpeloer", "web developer"],
       typeSpeed: 70,
-      backDelay: 1000,
+      backDelay: 500,
       backSpeed: 70,
     });
 
@@ -52,9 +55,25 @@ const HomePage = () => {
         </p>
       </div>
       <div className="mt-20 flex flex-rox">
-        <LucideGithub className="w-12 h-12" />
-        <MdiGmail className="w-12 h-12 mx-7" />
-        <MdiLinkedin className="w-12 h-12" />
+        <LucideGithub
+          className="w-12 h-12 hover:cursor-pointer"
+          isHover={githubIsHover}
+          onMouseEnter={() => setGithubIsHover(true)}
+          onMouseLeave={() => setGithubIsHover(false)}
+        />
+        <MdiGmail
+          className="w-12 h-12 mx-7 hover:cursor-pointer"
+          isHover={gmailIsHover}
+          onMouseEnter={() => setGmailIsHover(true)}
+          onMouseLeave={() => setGmailIsHover(false)}
+        />
+        <MdiLinkedin
+          className="w-12 h-12 hover:cursor-pointer"
+          isHover={linkedinIsHover}
+          onMouseEnter={() => setLinkedinIsHover(true)}
+          onMouseLeave={() => setLinkedinIsHover(false)}
+          onClick={() => console.log("cacascaac")}
+        />
       </div>
     </section>
   );
