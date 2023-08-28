@@ -23,7 +23,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <section className="basis-full px-24 lg:px-52 py-24 h-[100rem]">
+    <section className="basis-full px-5 sm:px-10 lg:px-52 py-24 h-[100rem]">
       <div className="w-auto h-auto">
         <h1 className="text-white font-mono text-[4rem]">
           Hi there! I'm Kevin,
